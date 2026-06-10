@@ -1,0 +1,196 @@
+body {
+    background-image:
+        linear-gradient(
+            rgba(173, 216, 230, 0.3),
+            rgba(173, 216, 230, 0.3)
+        ),
+        url("Assets/bg.jpg");
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 80px;
+}
+
+.pp {
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 20px;
+}
+
+.navbar {
+    background-color: #ffffff;
+    height: 80px;
+    width: 100%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-halo {
+    margin: 0;
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+.profil {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 50px;
+}
+
+.foto {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 300px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    margin-left: 190px;
+    margin-top: 140px;
+
+}
+
+.teks {
+    position: relative;
+    z-index: 2;
+    margin-left;
+    margin-left: 50px;
+    width: 450px;
+    margin-top: 200px;
+}
+
+.kertas {
+    position: absolute;
+    z-index: 1;
+    transform: rotate(90deg);
+    margin-top: -230px;
+}
+
+.teks h1,
+.teks p {
+    position: relative;
+    z-index: 2;
+}
+
+.pita {
+    height:200px;
+    width: 200px;
+    position: absolute;
+    z-index: 1;
+    margin-top: -30px;
+    margin-left: -100px;
+    transform: rotate(-18deg);
+}
+
+.kertas2 {
+    position: absolute;
+    z-index: 1;
+    width: 500px;
+    height: auto;
+    display: block;
+    margin-left: 100px;
+    margin-top: 18px;
+    display: flex;
+}
+
+.judul {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.isi-biodata {
+    position: relative;
+    z-index: 2;
+    margin-left: 150px;
+    margin-top: 120px;
+    width: 600px;
+}
+
+.biodata {
+    display: flex;
+    margin-left: 40px;
+}
+
+.box {
+    position: absolute;
+    z-index: 1;
+    width: 300px;
+    height: auto;
+    display: block;
+    margin-left: 400px;
+    margin-top: 90px;
+    transform: rotate(-8deg);
+}
+
+.ig {
+    position: absolute;
+    z-index: 2;
+    height: 60px;
+    width: auto;
+    margin-left: -260px;
+    margin-top: 250px;
+    transform: rotate(5deg);
+}
+
+.tiktok {
+    position: absolute;
+    z-index: 1;
+    height: 75px;
+    width: auto;
+    margin-left: -200px;
+    margin-top: 220px;
+}
+
+.threads {
+    position: absolute;
+    z-index: 2;
+    height: 60px;
+    width: auto;
+    margin-left: -250px;
+    margin-top: 200px;
+}
+
+.figma {
+    position: absolute;
+    z-index: 2;
+    height: 60px;
+    width: auto;
+    margin-left: -290px;
+    margin-top: 190px;
+    border-radius: 12px;
+    transform: rotate(-8deg);
+}
+
+.canva {
+    position: absolute;
+    z-index: 1;
+    height: 60px;
+    width: auto;
+    border-radius: 12px;
+    margin-left: -200px;
+    margin-top: 180px;
+    box-shadow: 0 2px 5px rgba(0,0,0,5);
+
+}
+
+.kotak {
+    position: absolute;
+    z-index: 1;
+    width: 700px;
+    height: auto;
+    margin-left: 590px;
+    margin-top: -100px;
+}
+
+.appreciation {
+    margin-top: 450px;
+}
+
+.foto1 {
+    transform: rotate(-90deg);
+}
