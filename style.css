@@ -1,9 +1,7 @@
 body {
     background-image:
-        linear-gradient(
-            rgba(173, 216, 230, 0.3),
-            rgba(173, 216, 230, 0.3)
-        ),
+        linear-gradient(rgba(173, 216, 230, 0.3),
+            rgba(173, 216, 230, 0.3)),
         url("Assets/bg.jpg");
     background-size: 100% auto;
     background-repeat: repeat-y;
@@ -18,14 +16,36 @@ body {
 }
 
 .navbar {
-    background-color: #ffffff;
+    background: rgba(173, 216, 230, 0.15) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
     height: 80px;
     width: 100%;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+
+    padding: 0 30px;
+}
+
+.navbar-brand {
+    color: #333 !important;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar-brand:hover {
+    color: #6ba8c9 !important;
+}
+
+.text-halo {
+    color: #333;
 }
 
 .text-halo {
@@ -51,6 +71,21 @@ body {
     margin-left: 190px;
     margin-top: 140px;
 
+    animation: floating 4s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 .teks {
@@ -76,7 +111,7 @@ body {
 }
 
 .pita {
-    height:200px;
+    height: 200px;
     width: 200px;
     position: absolute;
     z-index: 1;
@@ -135,6 +170,13 @@ body {
     margin-left: -260px;
     margin-top: 250px;
     transform: rotate(5deg);
+
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.ig:hover {
+    transform: rotate(5deg) translateY(-10px) scale(1.1);
 }
 
 .tiktok {
@@ -144,6 +186,13 @@ body {
     width: auto;
     margin-left: -200px;
     margin-top: 220px;
+
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.tiktok:hover {
+    transform: rotate(5deg) translateY(-10px) scale(1.1);
 }
 
 .threads {
@@ -153,6 +202,13 @@ body {
     width: auto;
     margin-left: -250px;
     margin-top: 200px;
+
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.threads:hover {
+    transform: translateY(-10px) scale(1.1);
 }
 
 .figma {
@@ -164,6 +220,13 @@ body {
     margin-top: 190px;
     border-radius: 12px;
     transform: rotate(-8deg);
+
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.figma:hover {
+    transform: rotate(-8deg) translateY(-10px) scale(1.1);
 }
 
 .canva {
@@ -174,8 +237,15 @@ body {
     border-radius: 12px;
     margin-left: -200px;
     margin-top: 180px;
-    box-shadow: 0 2px 5px rgba(0,0,0,5);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 5);
 
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+}
+
+.canva:hover {
+    transform: rotate(-8deg) translateY(-10px) scale(1.1);
 }
 
 .kotak {
@@ -185,12 +255,72 @@ body {
     height: auto;
     margin-left: 590px;
     margin-top: -100px;
+
+    animation: floatKotak 6s ease-in-out infinite;
+}
+
+@keyframes floatKotak {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 .appreciation {
     margin-top: 450px;
 }
 
-.foto1 {
-    transform: rotate(-90deg);
+.appreciation-card {
+    width: 20rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+
+    transition: all 0.3s ease;
+}
+
+.appreciation-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.sertifikat-frame {
+    height: 220px;
+    padding: 15px;
+    background: transparent;
+}
+
+.sertifikat-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.kartu {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.appreciation-card .card-body {
+    color: #333;
+}
+
+.appreciation-card .card-title {
+    font-weight: 600;
 }
