@@ -19,20 +19,43 @@
 </head>
 
 <body>
-    <!-- nav -->
-    <div class="navbar fixed-top">
-        <div class="d-flex align-items-center">
-            <img class="pp" src="Assets/pp.jpg" alt="pp" width="50" height="50">
-            <h1 class="text-halo">Helloow 𝜗ৎ</h1>
-        </div>
-
-        <div class="navbar-links">
-            <a class="navbar-brand" href="#home">Home</a>
-            <a class="navbar-brand" href="#about">About</a>
-            <a class="navbar-brand" href="#project">Project</a>
-            <a class="navbar-brand" href="#contact">Contact</a>
-        </div>
+ <!-- nav -->
+<nav class="navbar fixed-top">
+    <div style="display:flex; align-items:center; gap:8px;">
+        <img class="pp" src="Assets/pp.jpg" alt="pp">
+        <h1 class="text-halo">Helloow 𝜗ৎ</h1>
     </div>
+
+    <div class="navbar-links" id="navbar-links">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#project">Project</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle menu">
+        ☰
+    </button>
+</nav>
+
+    <div class="navbar-links" id="navbar-links">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#project">Project</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <script>
+        document.getElementById('hamburger-btn').addEventListener('click', function () {
+            document.getElementById('navbar-links').classList.toggle('open');
+        });
+
+        document.querySelectorAll('.navbar-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navbar-links').classList.remove('open');
+            });
+        });
+    </script>
 
     <!-- profil -->
     <div class="profil" data-aos="zoom-in-up" id="home">
@@ -68,10 +91,12 @@
                 <a href="https://www.instagram.com/nla.ghinna?igsh=eWllN3d2ZGl3NWtv" target="_blank">
                     <img src="Assets/instagram.png" alt="Instagram" class="ig">
                 </a>
-                <img src="Assets/tiktok.png" alt="tiktok" class="tiktok">
-                <img src="Assets/threads.png" alt="threads" class="threads">
-                <img src="Assets/logofigma.png" alt="figma" class="figma">
-                <img src="Assets/logocanva.jpg" alt="canva" class="canva">
+                <div class="aplikasi">
+                    <img src="Assets/tiktok.png" alt="tiktok" class="tiktok">
+                    <img src="Assets/threads.png" alt="threads" class="threads">
+                    <img src="Assets/logofigma.png" alt="figma" class="figma">
+                    <img src="Assets/logocanva.jpg" alt="canva" class="canva">
+                </div>
             </div>
 
             <img src="Assets/kotak.jpeg" alt="kotak" class="kotak">
@@ -184,10 +209,10 @@
 
     </div>
     <!-- footer -->
+
     <footer class="footer-glass text-center text-white py-3">
         &copy; 2026 Akuu Naila Ghina Elysia. All rights reserved.
     </footer>
-
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
