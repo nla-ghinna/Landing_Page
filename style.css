@@ -9,6 +9,17 @@ body {
     padding-top: 80px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+#home,
+#about,
+#project,
+#contact {
+    scroll-margin-top: 100px;
+}
+
 .pp {
     border-radius: 50%;
     object-fit: cover;
@@ -54,6 +65,7 @@ body {
     margin-left: 20px;
 }
 
+/* ===== PROFIL ===== */
 .profil {
     display: flex;
     align-items: center;
@@ -91,7 +103,6 @@ body {
 .teks {
     position: relative;
     z-index: 2;
-    margin-left;
     margin-left: 50px;
     width: 450px;
     margin-top: 200px;
@@ -120,6 +131,7 @@ body {
     transform: rotate(-18deg);
 }
 
+/* ===== BIODATA ===== */
 .kertas2 {
     position: absolute;
     z-index: 1;
@@ -241,7 +253,6 @@ body {
 
     transition: all 0.3s ease;
     cursor: pointer;
-
 }
 
 .canva:hover {
@@ -273,6 +284,7 @@ body {
     }
 }
 
+/* ===== APPRECIATION ===== */
 .appreciation {
     margin-top: 450px;
 }
@@ -323,4 +335,641 @@ body {
 
 .appreciation-card .card-title {
     font-weight: 600;
+}
+
+/* ===== CONTACT ===== */
+.contact-section {
+    margin-top: 250px;
+    margin-bottom: 100px;
+}
+
+.contact-card {
+    width: 600px;
+    margin: auto;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+
+    padding: 30px;
+
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+
+    position: relative;
+    overflow: hidden;
+
+    animation: floatContact 5s ease-in-out infinite;
+}
+
+@keyframes floatContact {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.wave-footer {
+    margin-top: 150px;
+    line-height: 0;
+}
+
+.wave-footer svg {
+    display: block;
+    width: auto;
+    height: screen;
+    margin-top: 10px;
+}
+
+.contact-bg {
+    background: linear-gradient(to bottom, #a2d9ff, #7fb8e6);
+    margin-top: -2px;
+    min-height: 100vh;
+    padding-top: 50px;
+    padding-bottom: 120px;
+}
+
+.contact-section {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.judul-contact {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2d5c7a;
+    font-size: 40px;
+}
+
+.footer-glass {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+
+    color: #2d5c7a !important;
+
+    box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== HIRONO ===== */
+.hirono1 {
+    position: absolute;
+    z-index: 1;
+    height: 150px;
+    width: auto;
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3));
+    margin-top: -100px;
+    margin-left: 200px;
+
+    animation: floatHirono 4s ease-in-out infinite;
+}
+
+.hirono2 {
+    position: absolute;
+    z-index: 1;
+    height: 150px;
+    width: auto;
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3));
+    margin-top: 10px;
+    margin-left: 1200px;
+
+    animation: floatHirono 5s ease-in-out infinite;
+}
+
+.hirono3 {
+    position: absolute;
+    z-index: 1;
+    height: 150px;
+    width: auto;
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3));
+    margin-top: 200px;
+    margin-left: 950px;
+
+    animation: floatHirono 6s ease-in-out infinite;
+}
+
+.hirono4 {
+    position: absolute;
+    z-index: 1;
+    height: 150px;
+    width: auto;
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3));
+    margin-top: 300px;
+    margin-left: 50px;
+
+    animation: floatHirono 4.5s ease-in-out infinite;
+}
+
+@keyframes floatHirono {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+/* ============================================================
+   RESPONSIVE — TABLET (max-width: 1024px)
+   ============================================================ */
+@media (max-width: 1024px) {
+
+    /* Navbar */
+    .text-halo {
+        font-size: 18px;
+    }
+
+    /* Profil */
+    .profil {
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 20px;
+        gap: 20px;
+    }
+
+    .foto {
+        width: 280px;
+        height: 280px;
+        margin-left: 0;
+        margin-top: 60px;
+    }
+
+    .teks {
+        width: 90%;
+        max-width: 500px;
+        margin-left: 0;
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .kertas {
+        display: none;
+    }
+
+    .pita {
+        display: none;
+    }
+
+    /* Biodata */
+    .judul {
+        margin-top: 120px;
+        font-size: 30px;
+    }
+
+    .biodata {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        position: relative;
+        padding: 20px;
+    }
+
+    .isi-biodata {
+        margin-left: 0;
+        margin-top: 20px;
+        width: 90%;
+        max-width: 500px;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+    }
+
+    .kertas2 {
+        position: relative;
+        width: 90%;
+        max-width: 400px;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .box {
+        position: relative;
+        width: 200px;
+        margin-left: 0;
+        margin-top: 20px;
+        transform: rotate(-8deg);
+    }
+
+    .dalamBox {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .ig,
+    .tiktok,
+    .threads,
+    .figma,
+    .canva {
+        position: relative;
+        margin-left: 0;
+        margin-top: 0;
+        height: 50px;
+        transform: none;
+    }
+
+    .ig:hover {
+        transform: translateY(-8px) scale(1.1);
+    }
+
+    .tiktok:hover,
+    .threads:hover {
+        transform: translateY(-8px) scale(1.1);
+    }
+
+    .figma:hover {
+        transform: translateY(-8px) scale(1.1);
+    }
+
+    .canva:hover {
+        transform: translateY(-8px) scale(1.1);
+    }
+
+    .kotak {
+        position: relative;
+        width: 90%;
+        max-width: 500px;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    /* Appreciation */
+    .appreciation {
+        margin-top: 80px;
+    }
+
+    /* Contact hirono — sembunyikan yang terlalu jauh di pinggir */
+    .hirono2,
+    .hirono3 {
+        display: none;
+    }
+
+    .hirono1 {
+        margin-left: 30px;
+        margin-top: -80px;
+    }
+
+    .hirono4 {
+        margin-left: auto;
+        right: 30px;
+        margin-top: 250px;
+    }
+
+    .contact-card {
+        width: 90%;
+        max-width: 550px;
+    }
+
+    .contact-bg {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .judul-contact {
+        font-size: 32px;
+    }
+}
+
+
+/* ============================================================
+   RESPONSIVE — MOBILE (max-width: 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+
+    body {
+        padding-top: 70px;
+    }
+
+    /* Navbar */
+    .navbar {
+        height: auto;
+        padding: 10px 15px;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .navbar .d-flex {
+        gap: 8px;
+    }
+
+    .pp {
+        width: 36px !important;
+        height: 36px !important;
+        margin-left: 0;
+    }
+
+    .text-halo {
+        font-size: 15px;
+        margin-left: 8px;
+    }
+
+    .navbar-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 2px;
+    }
+
+    .navbar-brand {
+        font-size: 13px;
+        padding: 4px 6px;
+    }
+
+    /* Profil */
+    .profil {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 15px;
+        gap: 0;
+    }
+
+    .foto {
+        width: 220px;
+        height: 220px;
+        margin-left: 0;
+        margin-top: 40px;
+        border-radius: 50%;
+    }
+
+    .teks {
+        width: 90%;
+        margin-left: 0;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .teks h1 {
+        font-size: 22px;
+    }
+
+    .teks p {
+        font-size: 14px;
+    }
+
+    .kertas {
+        display: none;
+    }
+
+    .pita {
+        display: none;
+    }
+
+    /* Biodata */
+    #about {
+        padding: 0 15px;
+    }
+
+    .judul {
+        font-size: 26px;
+        margin-top: 80px;
+    }
+
+    .biodata {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        padding: 15px;
+        overflow: hidden;
+    }
+
+    .isi-biodata {
+        margin-left: 0;
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+    }
+
+    .isi-biodata p {
+        font-size: 14px;
+    }
+
+    .kertas2 {
+        position: relative;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    .box {
+        position: relative;
+        width: 160px;
+        margin-left: 0;
+        margin-top: 15px;
+        transform: rotate(-8deg);
+    }
+
+    .dalamBox {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .ig,
+    .tiktok,
+    .threads,
+    .figma,
+    .canva {
+        position: relative;
+        margin-left: 0;
+        margin-top: 0;
+        height: 45px;
+        transform: none;
+    }
+
+    .ig:hover {
+        transform: translateY(-6px) scale(1.1);
+    }
+
+    .tiktok:hover,
+    .threads:hover {
+        transform: translateY(-6px) scale(1.1);
+    }
+
+    .figma:hover {
+        transform: translateY(-6px) scale(1.1);
+    }
+
+    .canva:hover {
+        transform: translateY(-6px) scale(1.1);
+    }
+
+    .kotak {
+        position: relative;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    /* Appreciation */
+    .appreciation {
+        margin-top: 60px;
+        padding: 0 15px;
+    }
+
+    .kartu {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .appreciation-card {
+        width: 90%;
+        max-width: 360px;
+    }
+
+    /* Wave */
+    .wave-footer {
+        margin-top: 80px;
+    }
+
+    /* Contact */
+    .contact-bg {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .judul-contact {
+        font-size: 26px;
+        margin-bottom: 30px;
+    }
+
+    .hirono1,
+    .hirono2,
+    .hirono3,
+    .hirono4 {
+        height: 90px;
+    }
+
+    .hirono1 {
+        margin-left: 10px;
+        margin-top: -60px;
+    }
+
+    .hirono2 {
+        display: none;
+    }
+
+    .hirono3 {
+        display: none;
+    }
+
+    .hirono4 {
+        margin-left: auto;
+        right: 10px;
+        margin-top: 200px;
+        position: absolute;
+    }
+
+    .contact-card {
+        width: 92%;
+        padding: 20px;
+        border-radius: 18px;
+    }
+
+    .contact-card .form-label {
+        font-size: 14px;
+    }
+
+    .contact-card .form-control {
+        font-size: 14px;
+    }
+
+    /* Footer */
+    .footer-glass {
+        font-size: 13px;
+        padding: 12px;
+    }
+}
+
+
+/* ============================================================
+   RESPONSIVE — SMALL MOBILE (max-width: 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+
+    .text-halo {
+        font-size: 13px;
+    }
+
+    .navbar-brand {
+        font-size: 12px;
+        padding: 3px 5px;
+    }
+
+    .foto {
+        width: 180px;
+        height: 180px;
+    }
+
+    .teks h1 {
+        font-size: 20px;
+    }
+
+    .teks p {
+        font-size: 13px;
+    }
+
+    .judul {
+        font-size: 22px;
+        margin-top: 60px;
+    }
+
+    .isi-biodata p {
+        font-size: 13px;
+    }
+
+    .ig,
+    .tiktok,
+    .threads,
+    .figma,
+    .canva {
+        height: 38px;
+    }
+
+    .judul-contact {
+        font-size: 22px;
+    }
+
+    .hirono1 {
+        height: 70px;
+    }
+
+    .hirono4 {
+        height: 70px;
+    }
+
+    .contact-card {
+        width: 95%;
+        padding: 16px;
+    }
+
+    .appreciation-card {
+        width: 95%;
+    }
 }
